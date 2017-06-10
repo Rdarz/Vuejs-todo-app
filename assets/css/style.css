@@ -1,0 +1,26 @@
+#list input{
+	padding: 5px;
+}
+.list-group{
+	margin: 25px 0;
+}
+.list-group .list-group-item{
+    overflow: hidden;
+}
+.list-group .list-group-item h4 i{
+	padding: 10px;
+}
+.list-group .list-group-item:hover{
+	background: #f4f4f4;
+}
+
+.list-group .list-group-item .glyphicon-remove-sign{
+	font-size: 20px;
+    margin: 10px;
+}
+.list-group .list-group-item .glyphicon-remove-sign:hover{
+	cursor: pointer;
+}
+.add-task{
+	padding:5px 50px
+}

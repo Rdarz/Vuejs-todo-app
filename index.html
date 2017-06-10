@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue - Todo App</title>
+  
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <a class="navbar-brand"> ToDo App (Vue) </a>
+    </div>
+  </nav>
+  <div class="container" id="list">
+    <div class="col-sm-12">
+      <div>
+        <input class="col-sm-10" placeholder="Task" v-model="task.title" />
+        <div class="col-sm-2">
+          <button class="btn btn-primary add-task pull-right" v-on:click="addTask">Add</button>
+        </div>
+      </div> 
+    </div>
+    <div class="col-sm-12">
+      <div class="list-group">
+        <div class="list-group-item" v-for="task in tasks">
+          <div class="col-sm-10">
+            <h4 class="list-group-item-heading "><i class="glyphicon glyphicon-list-alt"></i> {{ task.title }}</h4>
+          </div>
+          <div class="col-sm-2">
+            <i class="glyphicon glyphicon-remove-sign pull-right" v-on:click="deleteTask($index)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="node_modules/vue/dist/vue.min.js"></script>
+<script src="node_modules/vue-resource/dist/vue-resource.min.js"></script>
+<script src="app.js"></script>
+</html>
