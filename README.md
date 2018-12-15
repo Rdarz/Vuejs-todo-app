@@ -10,4 +10,3 @@ Installation :
 
 Run npm install.
 Run node server.js.
-Visit http://localhost:8080.
